@@ -49,23 +49,34 @@ public class Produto {
     public void adicionarProdutos(int quantMais) {
 
         setQuant(getQuant() + quantMais);
-        mostrarInfo();
+        System.out.println(toString());
     }
 
     public void removerProdutos(int quantMenos) {
 
         setQuant(getQuant() - quantMenos);
-        mostrarInfo();
+        System.out.println(toString());
     }
 
-    public void mostrarInfo() {
+//    public void mostrarInfo() {
+//
+//        System.out.printf("Nome:" + getNome() +"\n" +
+//                "Preço: R$" + getPreco() + "\n" +
+//                "Quantidade:" + getQuant() + "\n" +
+//                "Valor Total: R$" +String.format("%.2f", valorTotalEstoque()));
+//        System.out.println();
+//
+//    }
 
-        System.out.printf("Nome:" + getNome() +"\n" +
-                "Preço: R$" + getPreco() + "\n" +
-                "Quantidade:" + getQuant() + "\n" +
-                "Valor Total: R$" +String.format("%.2f", valorTotalEstoque()));
-        System.out.println();
-
+    public String toString(){
+        return "Nome:"
+                +getNome()
+                +" , R$"
+                + String.format("%.2f" , getPreco())
+                +", "
+                +getQuant()
+                +" unidades, Valor Total: R$"
+                + String.format("%.2f", valorTotalEstoque());
     }
 }
 
