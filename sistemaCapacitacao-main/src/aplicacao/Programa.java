@@ -34,16 +34,16 @@ public class Programa {
         quant = scanner.nextInt();
 
         Produto produto = new Produto(nome, preco, quant);
-        produto.mostrarInfo();
+        System.out.println(produto.toString());;
 
         System.out.println("Quantos produtos você deseja adicionar? ");
         int quantMais = scanner.nextInt();
         produto.adicionarProdutos(quantMais);
-        produto.mostrarInfo();
+
 
         System.out.println("Quantos produtos você deseja remover? ");
         int quantMenos = scanner.nextInt();
         produto.removerProdutos(quantMenos);
-        produto.mostrarInfo();
+        
     }
 }
