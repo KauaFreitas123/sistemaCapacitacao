@@ -37,13 +37,13 @@ public class Programa {
         System.out.println(produto.toString());;
 
         System.out.println("Quantos produtos você deseja adicionar? ");
-        int quantMais = scanner.nextInt();
-        produto.adicionarProdutos(quantMais);
+        quant = scanner.nextInt();
+        produto.adicionarProdutos(quant);
 
 
         System.out.println("Quantos produtos você deseja remover? ");
-        int quantMenos = scanner.nextInt();
-        produto.removerProdutos(quantMenos);
-        
+        quant = scanner.nextInt();
+        produto.removerProdutos(quant);
+
     }
 }
